@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机数</title>
+</head>
+<body>
+    <script>
+        // var res=Math.random();
+        // console.log(res);
+        //
+        // var res1 = Math.random()*10;
+        // var res2=Math.floor(Math.random()*11)
+        // console.log(res2);
+        // var res3=Math.floor(Math.random()*6)+5
+        // console.log(res3);
+        //
+        // function rund(m,n){
+        //     return Math.floor(Math.random()*(n-m+1))+(n-m)
+        // }
+        // var res4=rund(10,20);
+        // console.log(res4)
+
+    //用JavaScript生成99乘法表
+        function xfb(){
+            var str = ''
+            for (x=1;x<10;x++){
+                for (y=1;y<x+1;y++){
+                    str += y + '*' + x + '=' + x*y + ' '
+                };
+                str += '\n'
+            };
+            console.log(str);
+        }
+        xfb()
+
+
+
+    </script>
+
+</body>
+</html>

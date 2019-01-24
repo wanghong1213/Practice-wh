@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            width: 250px;
+            height: 300px;
+            margin: 30% auto;
+            background: yellowgreen;
+        }
+        
+        .btn{
+            outline: none;
+            cursor: pointer;
+            font-size: 20px;
+            height: 45px;
+            margin: 5px 0 5px 10px;
+            width: 45px;
+        }
+        #display{
+            font-size: 30px;
+            line-height: 45px;
+            width: 240px;
+            margin: 10px 5px 5px 5px;
+            text-align:right;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form>
+            <input type="text" id="display"><br>
+            <input type="button" class="btn" value="7" conclick="get(this.value)">
+            <input type="button" class="btn" value="8" conclick="get(this.value)">
+            <input type="button" class="btn" value="9" conclick="get(this.value)">
+            <input type="button" class="btn" value="c" conclick="qing()"><br>
+
+            <input type="button" class="btn" value="4" conclick="get(this.value)">
+            <input type="button" class="btn" value="5" conclick="get(this.value)">
+            <input type="button" class="btn" value="6" conclick="get(this.value)">
+            <input type="button" class="btn" value="+" conclick="qing()"><br>
+
+            <input type="button" class="btn" value="1" conclick="get(this.value)">
+            <input type="button" class="btn" value="2" conclick="get(this.value)">
+            <input type="button" class="btn" value="3" conclick="get(this.value)">
+            <input type="button" class="btn" value="-" conclick="qing()"><br>
+
+            <input type="button" class="btn" value="0" conclick="get(this.value)">
+            <input type="button" class="btn" value="*" conclick="get(this.value)">
+            <input type="button" class="btn" value="/" conclick="get(this.value)">
+            <input type="button" class="btn" value="=" conclick="count()"><br>
+
+
+        </form>
+    </div>
+</body>
+
+    <script type="text/javascript">
+        var txt = document.getElementById("display")
+
+        // 清空文本框方法
+        function qing() {
+            console.log('清空文本框')
+            text.value = '';
+        }
+
+        // 添加数值
+        function get(value){
+            console.log(value);
+            txt.value += value;
+        }
+
+        // 计算方法
+        function count() {
+            console.log(txt.value);
+            txt。value = eval(txt.value)
+
+        }
+    
+    </script>
+</html>

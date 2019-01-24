@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #ts{
+            color: yellowgreen;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="#">
+            用户名：<input type="text" name="username" id="name" onblur="func(this)"><span  id="ts">请输入邮箱(.com.net.cn)</span><br>
+            密  码：<input type="password" name="pwd">
+        </form>
+    </div>
+
+    <script class="box">
+        function func(obj){
+            var name = obj.value;
+            var ts = document.getElementById('ts');
+            var reg = /\w+e\w+\.(com|cn|net)/;
+            if (reg.test(name)){
+                ts.innerHTML = '你输入的邮箱不符合规则';
+                ts.style.color = 'red';
+                obj.style.color ='red';
+            }elase{};
+        }
+    </script>
+</body>
+</html>
